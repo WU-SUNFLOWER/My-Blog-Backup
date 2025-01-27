@@ -7,7 +7,7 @@ from meta_json_fields import *
 def process_markdown_file(md_file_path, directory):
     md_title = read_from_meta_json(md_file_path, META_TITLE_FIELD)
     relative_md_path = "blogs" + md_file_path.replace(directory, "").replace("\\", "/")
-    result = f"[{md_title}]({relative_md_path})\n\n"
+    result = f"1. [{md_title}]({relative_md_path})\n"
     return result
 
 def generate_catalogue(directory):
