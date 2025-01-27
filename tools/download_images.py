@@ -22,7 +22,7 @@ def download_and_replace_image_links(md_file_path, cookie_dict):
         content = file.read()
 
     # 正则表达式匹配Markdown中的图片链接
-    pattern = r'!\[.*?\]\((https?://.*?\.(awebp|webp|jpg|png|gif)\?.*?)\)'
+    pattern = r'!\[.*?\]\((https?://.*?\.(image#|awebp|webp|jpg|png|gif)\?.*?)\)'
     matches = re.findall(pattern, content)
 
     # 下载并保存图片，更新Markdown文件内容
@@ -79,6 +79,7 @@ def process_markdown_file(md_file_path, cookie_dict):
     else:
         # 更新meta.json
         write_to_meta_json(md_file_path, META_REPLACED_FIELD, True)
+        print(f"Successfully processed {md_file_path}")
 
     return True
 
