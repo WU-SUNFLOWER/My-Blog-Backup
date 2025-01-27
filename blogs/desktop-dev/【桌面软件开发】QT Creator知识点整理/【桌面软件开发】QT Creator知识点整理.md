@@ -1,5 +1,5 @@
 
-![60467270_p0.webp](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c559bb4219b7435481488d86c55250b8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1389&h=983&s=437514&e=webp&b=d9cfb5)
+![60467270_p0.webp](image/ee73f932ba26ea26dc20b6569d7ce790f3885b11cc620600e09683b7c925dfeb.image)
 
 # 字符串处理
 
@@ -69,7 +69,7 @@ connect(this, &Dialog::signal_dialog_send_msg, [](QString* str) {
 
 看如下的实例：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/102c3b91cd554b6ba5ae1f43beb941cd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=601&h=523&s=31110&e=png&b=2f3031)
+![image.png](image/3fa688ed1517686d899f48824f3323a819d18ece4e693a9f84596a1b195db9e2.image)
 
 在设计界面的"编辑信号/槽"编辑后.ui文件中出现如下内容：
 
@@ -300,7 +300,7 @@ void Dialog::on_pushButton_2_clicked() {
 }
 ```
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6978ea8185d944c095927cadf02f6839~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1073&h=637&s=38963&e=png&b=f0efef)
+![image.png](image/f72d0b0fba88b8f0945cbe7181d9d7766d399e8f657b104c272364c2ebdac1e5.image)
 
 ### 模态窗口传值
 
@@ -345,7 +345,7 @@ void MainWindow::on_pushButton_clicked() {
 
 **输出：**
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/876a227e7caf4417be0878682993e737~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=345&h=196&s=18221&e=png&b=2e2f30)
+![image.png](image/b7c94d0b3f661e71852255ffc80241693b5c4a00f1e5101cae085cff13fbbefe.image)
 
 
 ## QT自带的消息弹窗
@@ -371,7 +371,7 @@ switch (ret) {
 }
 ```
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e9ec1138b62441209e93dcf8bbfb0920~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=362&h=224&s=8116&e=png&b=f8f8f8)
+![image.png](image/5d61c88c487fb889c7fca1f298a733e05fdc14da59c6fb465c3166f021bdb695.image)
 
 
 # 资源
@@ -412,7 +412,7 @@ ui->label->setPixmap(pix.scaled(ui->label->size());
 
 并且在C++代码中可以通过`ui->menu_F`和`ui->action_O`之类形式可以直接访问到自定义菜单栏和菜单项。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2a11dd1880d5481ba69541a964db4028~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1681&h=782&s=107536&e=png&b=323334)
+![image.png](image/eed3557b2cac91e78cb46195ed80291bcf2c9d34544c35a94de3c28c8b4eb3cb.image)
 
 考虑到应用开发中可能有动态添加菜单的需求，给出纯代码实现如下：
 
@@ -512,7 +512,7 @@ toolBar->addAction(tool1);
 toolBar->addWidget(fontSelector);
 ```
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5fd0279d2063463e95ed007937197b70~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=420&h=135&s=10237&e=png&b=fafafa)
+![image.png](image/e88e2b31853ee0e79886d2f32fb70ac47e51aeecfb03eb363278b913e181df3a.image)
 
 # 事件
 
@@ -772,7 +772,7 @@ QString str = time.toString("yyyy-MM-dd hh:mm:ss dddd");
 
 状态栏可在"设计"面板直接添加。
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a7d9ada9f8245f3a6096455dcb4b3e0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=404&h=596&s=30059&e=png&b=333435)
+![image.png](image/bc2bc121ad175f1a60562206c026a47f3cc28e666b8fd6ff798b57555efef3ff.image)
 
 如果需要更新状态栏中显示的内容，调用`QStatusBar::showMessage(const QString &message)`方法即可。
 

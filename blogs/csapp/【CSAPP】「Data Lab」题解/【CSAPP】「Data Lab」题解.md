@@ -1,5 +1,5 @@
 
-![108566149_p0.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b504769967b64ab789214d67cb14c78a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1206&h=1711&s=461749&e=jpg&b=fcf7ea)
+![108566149_p0.jpg](image/1d8e1f4c68a9c785a0b4cc8de42f9204dd1afbf332152f6f979e645124496720.image)
 
 作为一名初学者，在做完CSAPP课程的「Data Lab」实验之后，我仍然感到回味无穷，惊叹于CMU教授们设计的Puzzles质量之高与解法之巧——即只利用最基本的位运算，来实现一些在编程中人们早已习以为常的运算。
 

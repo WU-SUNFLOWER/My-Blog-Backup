@@ -1,4 +1,4 @@
-![115044523_p0.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e6bea08441a042f9b6bd437792f02717~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3750&h=2351&s=631135&e=jpg&b=312c29)
+![115044523_p0.jpg](image/648fa74213a9f297b663bac1829a5d9322a828b1e660912872c1cf4c9c494f52.image)
 
 ### 求解最大子数组问题
 

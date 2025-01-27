@@ -3,7 +3,7 @@
 
 # Single-Source Shortest Paths
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c8199a5efa9447d1b52c6b0081f26530~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=499&h=357&s=32806&e=png&b=fffbfb)
+![image.png](image/6db2f1541fe1d662e9897b2b26d8fe48e35a96e7bbde339760879accbbd37802.image)
 
 ## The Bellman-Ford algorithm
 
@@ -158,7 +158,7 @@ dijkstra(5, [
 # All-Pairs Shortest Paths
 
 
-![无标题.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c602b319ea6c4f5a9b1e4ba80b02684a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=748&h=641&s=47750&e=png&b=fefbfb)
+![无标题.png](image/794c3e91132924b8cd46e662e17132a858450a23bea35e90b5b16908957f87e0.image)
 
 ## The Floyd-Warshall algorithm
 

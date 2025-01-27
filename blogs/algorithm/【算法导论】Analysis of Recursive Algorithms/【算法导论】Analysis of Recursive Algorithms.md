@@ -1,4 +1,4 @@
-![113276050_p0 (1).jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19a6113719224993961f4f42d2b9deba~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1447&h=2000&s=422380&e=jpg&b=e2c167)
+![113276050_p0 (1).jpg](image/cbf6e907e063786a7e5c1084ea5202b099e4234214cf11c82cbd02c067b1ecbc.image)
 
 ### 知识点回顾
 

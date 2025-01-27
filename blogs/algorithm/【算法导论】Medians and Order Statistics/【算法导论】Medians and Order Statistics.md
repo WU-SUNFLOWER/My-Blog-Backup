@@ -1,5 +1,5 @@
 
-![id=54763430.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1c0fb7111d1948e39b9cf2238aecfa98~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=800&h=1150&s=327649&e=jpg&b=fafaee)
+![id=54763430.jpg](image/9820c425f5322a03d3ef343de5f286fbc3736818d24bbb28cad5674e7a4a5c33.image)
 
 # Minimum and maximum
 

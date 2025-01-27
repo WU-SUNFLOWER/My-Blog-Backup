@@ -1,5 +1,5 @@
 
-![108320734_p0.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a60131b8de442b0b5cd19cb2f0c7eb4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3880&h=1440&s=485424&e=jpg&b=f7f4f4)
+![108320734_p0.jpg](image/785bc6620c18208fe048bcb97624e456d450321c7b9090a970e642aca835405d.image)
 
 本文用于记录笔者在学习「Windows API」时碰到的疑难点。本文对应的实验环境为Visual Studio 2022。
 
@@ -436,7 +436,7 @@ EnableMenuItem(hMenu, IDM_EXIT, MF_DISABLED | MF_BYCOMMAND);
 
 **禁用菜单-效果示例：**
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3540ab8814624a70a7792780da4ccae5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=284&h=157&s=11084&e=png&b=faf9f9)
+![image.png](image/d593203cec247a73fc568ebe1086ccca467c5e3f7e08ba82a160e3e1742dd9f6.image)
 
 至于禁用菜单，写法与禁用菜单项基本一致，不过要注意两点：
 
@@ -454,7 +454,7 @@ DrawMenuBar(hWnd);
 **禁用菜单-效果示例**
 
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fbcfddc07ac4362ad3768e751b6f76d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=204&h=81&s=5997&e=png&b=fefdfd)
+![image.png](image/1683e2e471ebff3a6e26fe8796f394dba90ec295265bb714070b44c5f4f8b2d9.image)
 
 # 插入菜单（项）问题
 
@@ -496,7 +496,7 @@ InsertMenuItem(hSubMenu, IDM_EXIT, false, &menuInfo);
 
 **插入菜单项-效果示例：**
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca93b6f48abf42d8ad457a27827cff5a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=185&h=174&s=10997&e=png&b=f7f6f6)
+![image.png](image/036b1f4204e451bfa818d75ae6e65521b75ac8c6a62c93004da0f51d861a3304.image)
 
 与禁用菜单的问题类似，我们也可以将上述代码推广至"插入菜单问题"。
 
@@ -525,7 +525,7 @@ DrawMenuBar(hWnd);
 
 **插入菜单-效果示例**
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff913773e79e46b680c2f5ea88569917~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=218&h=74&s=6992&e=png&b=fefdfd)
+![image.png](image/ceb498d004b2863ed888f80c07189284083c6287b5c436579e37e2af0d13fd06.image)
 
 # 追加菜单（项）问题
 
@@ -563,7 +563,7 @@ DrawMenuBar(hWnd);
 **追加菜单（项）-效果示例：**
 
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4cd19970b42d4db9917b0e948c0fdd90~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=333&h=183&s=12435&e=png&b=fbfbfb)
+![image.png](image/2b0072e96f85c8cd11a746c455a252e3f5c9cff7f65876a7dc2e6444401ec448.image)
 
 # 勾选（撤销）菜单项问题
 
@@ -583,7 +583,7 @@ CheckMenuItem(hNewMenu, 1, MF_CHECKED | MF_BYPOSITION);
 
 **勾选菜单项-效果示例：**
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/026c9bf465804ee99daad4ab437f054a~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=320&h=169&s=12621&e=png&b=fafafa)
+![image.png](image/9d0a3a06ebdad674a45a8827e18672e9a3318c174bfc35170a0ce82f3f281eed.image)
 
 与`EnableMenuItem`函数类似，`CheckMenuItem`函数也支持"反向操作"，即撤销对某个菜单项的勾选。我们只需要将前述代码中的宏`MF_CHECKED`替换为`MF_UNCHECKED`即可。
 
@@ -634,7 +634,7 @@ HWND hDialog = CreateDialog(hInst,
 
 在开发过程中，若出现非模态对话框无法正常弹出的情况，请尝试在资源编辑界面将"可见"属性设置为true。
 
-![无标题.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c8c18bac12b0445bbd05663d0944e44f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=332&h=360&s=13386&e=png&b=262626)
+![无标题.png](image/7bed3bebd3f890fa57d3dabb3ca4d6d25a22ac8a50d5bef234e1a64f3eb4c454.image)
 
 **模态对话框**使用宏`DialogBox(hInstance, MAKEINTRESOURCE(窗口资源ID号), hWnd, 窗口处理函数)`创建。对于模态对话框，父窗口可以在子窗口关闭后接收到子窗口的返回值，即：
 

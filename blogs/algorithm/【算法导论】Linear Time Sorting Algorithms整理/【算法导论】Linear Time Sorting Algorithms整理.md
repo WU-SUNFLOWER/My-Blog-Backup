@@ -1,5 +1,5 @@
 
-![109715099_p0.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/41b019b47c7945f985326fe4aa420fe5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=4320&h=2160&s=550434&e=jpg&b=e2dbaf)
+![109715099_p0.jpg](image/091c7c1191f2a7871973947befbedd0cb5e35d43e39ecf1a38897986cde9922f.image)
 
 书接上回[【专业课学习】Comparison Sorting Algorithm整理](https://juejin.cn/user/3544481220008744/posts)，这次我们来看看依赖额外空间的*Linear Time Sorting Algorithm*。
 

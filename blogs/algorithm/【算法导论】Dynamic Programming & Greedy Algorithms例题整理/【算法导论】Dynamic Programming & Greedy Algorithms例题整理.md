@@ -1,5 +1,5 @@
 
-![47139274_p0.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b43c3118f36b4ffb9b2af6a779284a2f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1032&h=1135&s=1614192&e=jpg&b=daadc6)
+![47139274_p0.jpg](image/782a12a8e68a0d0c6805a6329a19a1d10a9478bf7ab2eddba32ec073e613057f.image)
 
 有关图的算法请移步
 

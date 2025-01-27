@@ -1,5 +1,5 @@
 
-![86247816_p0.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/37d75843024b49a89aaf394432fdaa5c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1000&h=1827&s=701978&e=jpg&b=736377)
+![86247816_p0.jpg](image/65ca8abcabaaf8bf491ff3e9273888e9f9c42e47c41cef7ebc3d9a8e329cbae8.image)
 
 BinarySearch是同学们耳熟能详的一种用于已排序顺序表的查找算法，也是很多同学最早接触的*decrease-and-conquer*算法。
 
