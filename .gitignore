@@ -1,0 +1,77 @@
+# ---------------
+# Python 开发相关
+# ---------------
+# 字节码缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境
+venv/
+env/
+.venv/
+.conda/
+
+# 构建和分发文件
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# 单元测试和覆盖率报告
+.coverage
+htmlcov/
+.pytest_cache/
+test-results.xml
+
+# Jupyter Notebook 临时文件
+.ipynb_checkpoints/
+
+# ------------------
+# 操作系统和编辑器
+# ------------------
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs*.db
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+
+# -----------------
+# 环境配置和敏感文件
+# -----------------
+.env
+.env.local
+.env.development
+.env.production
+secrets.yml
+
+# -----------------
+# 日志和调试文件
+# -----------------
+*.log
+*.sqlite
+*.sql
+*.dump
+
+# -----------------
+# 其他工具
+# -----------------
+# Poetry 的虚拟环境目录（默认在项目目录下）
+.python-version  # pyenv 版本文件
+
+# mypy 类型检查缓存
+.mypy_cache/
+
+# pipenv
+Pipfile.lock
+
+# 本地开发配置
+instance/

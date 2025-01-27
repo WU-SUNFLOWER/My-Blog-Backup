@@ -3,44 +3,11 @@ import os
 import argparse
 import hashlib
 import requests
-import json
+
+from meta_json_manager import *
+from meta_json_fields import *
 
 cookie_str = "sid_guard=a2889cf48eba4adca0658f0683dcd8e8%7C1722182808%7C31536000%7CMon%2C+28-Jul-2025+16%3A06%3A48+GMT; uid_tt=21537489a3b39e8fb98b96686deecd0e; uid_tt_ss=21537489a3b39e8fb98b96686deecd0e; sid_tt=a2889cf48eba4adca0658f0683dcd8e8; sessionid=a2889cf48eba4adca0658f0683dcd8e8; sessionid_ss=a2889cf48eba4adca0658f0683dcd8e8; sid_ucp_v1=1.0.0-KDgzZDAwZmZlNjk1YWRjZmQ3ZTA3NDlkYzc4NzIxOWVmYmM4YzNiMGMKFwiotqDA_fWlBhCY2Zm1BhiwFDgCQO8HGgJsZiIgYTI4ODljZjQ4ZWJhNGFkY2EwNjU4ZjA2ODNkY2Q4ZTg; ssid_ucp_v1=1.0.0-KDgzZDAwZmZlNjk1YWRjZmQ3ZTA3NDlkYzc4NzIxOWVmYmM4YzNiMGMKFwiotqDA_fWlBhCY2Zm1BhiwFDgCQO8HGgJsZiIgYTI4ODljZjQ4ZWJhNGFkY2EwNjU4ZjA2ODNkY2Q4ZTg; store-region=cn-zj; store-region-src=uid; __tea_cookie_tokens_2608=%257B%2522web_id%2522%253A%25227401029162754000395%2522%252C%2522user_unique_id%2522%253A%25227401029162754000395%2522%252C%2522timestamp%2522%253A1723186404834%257D; _tea_utm_cache_2608={%22utm_source%22:%22web_profile%22}; _tea_utm_cache_2018={%22utm_source%22:%22web_profile%22}";
-
-meta_json_filename = "meta.json"
-
-def get_meta_json_path(md_file_path):
-    dirname = os.path.dirname(md_file_path)
-    return os.path.join(dirname, meta_json_filename)
-
-def meta_json_exists(md_file_path):
-    return os.path.exists(get_meta_json_path(md_file_path))
-
-def read_from_meta_json(md_file_path, key):
-    meta_dict = dict()
-    filename = get_meta_json_path(md_file_path)
-
-    if os.path.exists(filename):
-        with open(filename, 'r', encoding='utf-8') as file:
-            meta_dict = json.load(file)
-    else:
-        raise Exception("Can't find {filename}")
-    
-    return meta_dict.get(key, None)
-
-def write_to_meta_json(md_file_path, key, value):
-    filename = get_meta_json_path(md_file_path);
-    meta_dict = dict()
-
-    if os.path.exists(filename):
-        with open(filename, 'r', encoding='utf-8') as file:
-            meta_dict = json.load(file)
-
-    meta_dict[key] = value
-
-    with open(filename, 'w', encoding='utf-8') as file:
-        json.dump(meta_dict, file, ensure_ascii=False, indent=4)
-
 
 def download_and_replace_image_links(md_file_path, cookie_dict):
     save_folder_suffix = "image"
@@ -77,9 +44,10 @@ def download_and_replace_image_links(md_file_path, cookie_dict):
             # 替换Markdown文件中的链接
             content = content.replace(url, f"{save_folder_suffix}/{filename}")
 
-            print(f"Successfully download {url}")
+            #print(f"Successfully download {url}")
         except requests.RequestException as e:
             print(f"Failed to download {url}: {e}")
+            raise e
 
     # 将更新后的内容写回.md文件
     with open(md_file_path, 'w', encoding='utf-8') as file:
@@ -92,24 +60,25 @@ def convert_cookie_to_dict(cookies):
         result[key] = value
     return result
 
-def process_markdown_file(file_path, cookie_dict):
+def process_markdown_file(md_file_path, cookie_dict):
     """处理单个Markdown文件"""
-    if not os.path.isfile(file_path):
-        raise Exception(f"Error: File {file_path} does not exist.")
-    if not file_path.endswith('.md'):
-        raise Exception(f"Error: {file_path} is not a Markdown file.")
+    if not os.path.isfile(md_file_path):
+        raise Exception(f"Error: File {md_file_path} does not exist.")
+    if not md_file_path.endswith('.md'):
+        raise Exception(f"Error: {md_file_path} is not a Markdown file.")
     
     # 检查md文件中的图片链接是否已经被替换过了
-    replaced_flag = "image_paths_are_replaced"
-    if meta_json_exists(file_path):
-        if read_from_meta_json(file_path, replaced_flag):
-            raise Exception(f"Error: The images of {file_path} has been replaced already.")
+    if read_from_meta_json(md_file_path, META_REPLACED_FIELD):
+        raise Exception(f"Error: The images of {md_file_path} has been replaced already.")
 
     # 下载图片并更话md文件中的链接
-    download_and_replace_image_links(file_path, cookie_dict)
-
-    # 更新meta.json
-    write_to_meta_json(file_path, replaced_flag, True)
+    try:
+        download_and_replace_image_links(md_file_path, cookie_dict)
+    except requests.RequestException as e:
+        pass
+    else:
+        # 更新meta.json
+        write_to_meta_json(md_file_path, META_REPLACED_FIELD, True)
 
     return True
 
